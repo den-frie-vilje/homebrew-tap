@@ -1,11 +1,11 @@
 class Docksteady < Formula
   desc "Keeps a macOS multi-monitor arrangement steady for identical displays"
   homepage "https://github.com/den-frie-vilje/docksteady"
-  url "https://github.com/den-frie-vilje/docksteady/archive/refs/tags/v0.3.1.tar.gz"
-  sha256 "086bacf11bb6213bc54802fd44da7f0ca462479aea650d5f6445b3ace2fe575a"
+  url "https://github.com/den-frie-vilje/docksteady/archive/refs/tags/v0.3.2.tar.gz"
+  sha256 "6d52bde47a5dd20913f91109fd5d256d051c9b5246e80d1aa38836ba54675fcc"
   license "MIT"
 
-  depends_on :macos
+  depends_on macos: :tahoe
   depends_on arch: :arm64
   depends_on "sleepwatcher"
 
