@@ -1,11 +1,12 @@
 class Docksteady < Formula
   desc "Keeps a macOS multi-monitor arrangement steady for identical displays"
   homepage "https://github.com/den-frie-vilje/docksteady"
-  url "https://github.com/den-frie-vilje/docksteady/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "359fa4fb22abec5e8e9c2f5e87503fe15f4d0cd1ad4289346b07a98beecd206d"
+  url "https://github.com/den-frie-vilje/docksteady/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "f472900c7f06509b56434e0db32bdd6b61a66d318e73949b66bf25155f2db9dd"
   license "MIT"
 
   depends_on :macos
+  depends_on arch: :arm64
   depends_on "sleepwatcher"
 
   def install
@@ -20,6 +21,8 @@ class Docksteady < Formula
         brew services start sleepwatcher
       Then, docked with both panels attached and arranged correctly:
         docksteady init
+      Before brew uninstall, remove the schedule and wake trigger:
+        docksteady disarm
     EOS
   end
 
