@@ -1,8 +1,10 @@
 class Boomerblaster < Formula
   desc "Silent disco for the open-plan office: cast from a phone, listen in sync in a browser"
   homepage "https://github.com/den-frie-vilje/boomerblaster"
-  url "https://github.com/den-frie-vilje/boomerblaster/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+  # The archive of the v0.1.0 commit; switch to the tag URL once the tag exists on GitHub.
+  url "https://github.com/den-frie-vilje/boomerblaster/archive/12d91fe6a2317725d11e1a6e7c7ceab774036e1d.tar.gz"
+  version "0.1.0"
+  sha256 "6c7ec1c514c8868a390a5a025fc299c293ed5308c4a63227f0be8302ad5b2277"
   license "MIT"
 
   depends_on "librespot"
