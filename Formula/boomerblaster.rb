@@ -1,14 +1,18 @@
 class Boomerblaster < Formula
-  desc "Silent disco for the open-plan office: cast from a phone, listen in sync in a browser"
+  desc "Silent disco for the open-plan office: cast from a phone, hear it in a browser"
   homepage "https://github.com/den-frie-vilje/boomerblaster"
   # The archive of the 0.2.1 commit; switch to the tag URL once the tag exists on GitHub.
   url "https://github.com/den-frie-vilje/boomerblaster/archive/0389ad1afe67f05523cc99cbcf7e0d8d9efb319a.tar.gz"
   version "0.2.1"
   sha256 "d474f35ad6a6447b090e36649c8c12ce4d9b791c09c3ea1670b2cb4cdb52294f"
   license "MIT"
+  revision 1
 
+  # This tap's shairport-sync is built with AirPlay 2, which needs nqptp
+  # running; homebrew-core's build is classic AirPlay only.
+  depends_on "den-frie-vilje/tap/nqptp"
+  depends_on "den-frie-vilje/tap/shairport-sync"
   depends_on "librespot"
-  depends_on "shairport-sync"
   depends_on "snapcast"
 
   def install
