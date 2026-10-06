@@ -1,10 +1,10 @@
 class Boomerblaster < Formula
   desc "Silent disco for the open-plan office: cast from a phone, listen in sync in a browser"
   homepage "https://github.com/den-frie-vilje/boomerblaster"
-  # The archive of the v0.1.0 commit; switch to the tag URL once the tag exists on GitHub.
-  url "https://github.com/den-frie-vilje/boomerblaster/archive/12d91fe6a2317725d11e1a6e7c7ceab774036e1d.tar.gz"
-  version "0.1.0"
-  sha256 "6c7ec1c514c8868a390a5a025fc299c293ed5308c4a63227f0be8302ad5b2277"
+  # The archive of the 0.2.0 commit; switch to the tag URL once the tag exists on GitHub.
+  url "https://github.com/den-frie-vilje/boomerblaster/archive/8e6a79cd7e52589e47ada989e5e981d4c4717442.tar.gz"
+  version "0.2.0"
+  sha256 "8da247b5605ea559febf8573409e77a636425107f1d43ec7fde13b4998d31842"
   license "MIT"
 
   depends_on "librespot"
@@ -13,6 +13,7 @@ class Boomerblaster < Formula
 
   def install
     bin.install "boomerblaster"
+    pkgshare.install "listener/dist" => "listener"
   end
 
   service do
